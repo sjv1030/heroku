@@ -44,7 +44,11 @@ soql_poor = ('https://data.cityofnewyork.us/resource/nwxe-4ae8.json?' +\
 soql_trees_steward_poor = pd.read_json(soql_poor)
 
 answer_1 = '''
-The highest proportion of trees are in good health.
+My final project plots data sourced from the St. Louis Federal Reserve.
+A user can select the desired economic variable. This Dash app will then
+plot the selected variable in an interactive chart and a small multiple will
+show the selected variable plotted against other important macroeconomic 
+variables, such as real GDP, nominal GDP, and core inflation YoY%.
 '''
 
 answer_2 = '''
@@ -64,7 +68,7 @@ def generate_table(dataframe, max_rows=10):
     )
 
 app.layout = html.Div([
-    html.H1(children='Silverio J. Vasquez - Module #4'),  
+    html.H1(children='Silverio J. Vasquez - Data 608 - Final Project'),  
         html.Div(children=[
     html.H2(children='Answer to Question #1'),
     dcc.Markdown(children=answer_1),  

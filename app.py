@@ -14,6 +14,7 @@ import pandas as pd
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
 
 soql_url = ('https://data.cityofnewyork.us/resource/nwxe-4ae8.json?' +\
         '$select=health,count(tree_id)' +\
